@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3D Exhibition</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: #000;
+        overflow: hidden;
+      }
+
+      #app {
+        width: 100vw;
+        height: 100vh;
+      }
+
+      #loading {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 18px;
+        z-index: 1000;
+      }
+
+      #controls {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        color: white;
+        font-size: 14px;
+        z-index: 1000;
+        background: rgba(0, 0, 0, 0.7);
+        padding: 10px;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <div id="loading">Loading 3D Exhibition...</div>
+      <div id="controls">
+        <div>Click: Lock mouse for FPS controls</div>
+        <div>WASD: Move around</div>
+        <div>Mouse: Look around</div>
+        <div>Space/Shift: Move up/down</div>
+        <div>V: Toggle video playback</div>
+        <div>T: Force update video texture</div>
+        <div>D: Debug TV screen</div>
+        <div>E: Export vintage TV wall</div>
+        <div>R: Reset camera</div>
+        <div>F: Fullscreen</div>
+        <div>H: Toggle help</div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
